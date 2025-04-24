@@ -54,3 +54,25 @@ for method in results_df['method'].unique():
     plt.xlabel('Number of PCA Components')
     plt.ylabel('Number of Clusters (k)')
     plt.show()
+
+\\GMM
+from sklearn.mixture import GaussianMixture
+results = []
+
+for n_dims in range(2, 15, 3): 
+    X_pca = PCA(n_components=n_dims).fit_transform(X_scaled)
+    for k in range(2, 9):  
+        gmm = GaussianMixture(n_components=k, random_state=42)
+        labels = gmm.fit_predict(X_pca)
+        score = silhouette_score(X_pca, labels)
+        results.append({'dims': n_dims, 'k': k, 'silhouette': score})
+
+results_df = pd.DataFrame(results)
+heatmap_data = results_df.pivot(index='k', columns='dims', values='silhouette')
+
+plt.figure(figsize=(12, 5))
+sns.heatmap(heatmap_data, annot=True, fmt=".3f", cmap='viridis')
+plt.title('Silhouette Score - GMM')
+plt.xlabel('Number of PCA Components')
+plt.ylabel('Number of Clusters (k)')
+plt.show()
