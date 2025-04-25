@@ -79,7 +79,7 @@ plt.show()
 
 
 
-\\amount of clusters acorrding to the amount of uniqe values of every external variable
+#amount of clusters acorrding to the amount of uniqe values of every external variable
 
 # Split data into 20 groups
 np.random.shuffle(X_scaled)
