@@ -1,4 +1,4 @@
-def run_clusters_Dimensions_HeatMaps():
+def run_clusters_dimensions_heatmaps():
     
     //K-means
     
@@ -81,5 +81,5 @@ def run_clusters_Dimensions_HeatMaps():
 
 
 if __name__ == "__main__":
-    run_clusters_Dimensions_HeatMaps()
+    run_clusters_dimensions_heatmaps()
     
