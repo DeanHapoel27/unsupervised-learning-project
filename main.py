@@ -19,6 +19,15 @@ import leidenalg
 
 
 def main():
+    run_getting_processing_data()
+    run_onehotvector()
+    run_clusters_dimensions_heatmaps()
+    run_algos_groups_dataframe()
+    run_statistical_tests()
+    run_mutual_info_algos_ext_variables()
+    run_anomalies_detection()
+    run_tsne_class_k_means()
+
     
 
 
