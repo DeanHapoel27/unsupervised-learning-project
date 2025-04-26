@@ -3,7 +3,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler
 
-def run_getting_data():
+def run_getting_processing_data():
   df = pd.read_csv('bodyPerformance.csv')
   df.head()
   
@@ -43,5 +43,5 @@ def run_getting_data():
   X_scaled = scaler.fit_transform(X_encoded)
 
 if __name__ == "__main__":
-  run_getting_data()
+  run_getting_processing_data()
     
